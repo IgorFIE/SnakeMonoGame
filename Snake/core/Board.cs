@@ -1,5 +1,5 @@
 ﻿
-namespace SnakeTest.core {
+namespace Snake.core {
     class GameBoard {
 
         public Position[,] board { get; private set; }

@@ -1,10 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using SnakeTest.core;
+using Snake.core;
 using System;
 
-namespace SnakeTest {
+namespace Snake {
     public class GameLogic : Game {
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
@@ -17,7 +17,7 @@ namespace SnakeTest {
         private int newFoodY;
 
         private GameBoard gameBoard;
-        private Snake snake;
+        private core.Snake snake;
 
         public GameLogic() {
             graphics = new GraphicsDeviceManager(this);
@@ -33,7 +33,7 @@ namespace SnakeTest {
         private void initGameVariables() {
             random = new Random();
             gameBoard = new GameBoard(GameProperties.GAME_SCREEN / GameProperties.GAME_OBJS_SIZE);
-            snake = new Snake(gameBoard.board[gameBoard.board.GetLength(0) / 2, gameBoard.board.GetLength(0) / 2]);
+            snake = new core.Snake(gameBoard.board[gameBoard.board.GetLength(0) / 2, gameBoard.board.GetLength(0) / 2]);
         }
 
         private void setGameScreenSize() {
@@ -76,7 +76,6 @@ namespace SnakeTest {
         }
 
         private void createFood() {
-            Console.WriteLine(snake.snakeBody.Count + " || " + (gameBoard.board.GetLength(0) * gameBoard.board.GetLength(1)));
             if (food == null && snake.snakeBody.Count < (gameBoard.board.GetLength(0) * gameBoard.board.GetLength(1))) {
                 while (food == null) {
                     if (!checkIfNewFoodIntersectsWithSnakeBody()) {

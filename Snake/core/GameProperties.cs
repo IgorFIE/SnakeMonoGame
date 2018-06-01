@@ -1,5 +1,5 @@
 ﻿
-namespace SnakeTest {
+namespace Snake {
     class GameProperties {
         internal const int GAME_OBJS_SIZE = 10;
         internal const int SNAKE_DELAY = 20;

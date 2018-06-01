@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SnakeTest.core {
+namespace Snake.core {
     class Snake {
 
         public List<Position> snakeBody { get; private set; }

@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
 
-namespace SnakeTest.core {
+namespace Snake.core {
     class SnakeMovement {
 
         public bool snakeCollision { get; private set; }

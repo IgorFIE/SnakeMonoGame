@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SnakeTest
+namespace Snake
 {
     /// <summary>
     /// The main class.

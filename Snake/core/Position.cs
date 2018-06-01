@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 
-namespace SnakeTest.core {
+namespace Snake.core {
     class Position {
 
         public int x { get; private set; }
